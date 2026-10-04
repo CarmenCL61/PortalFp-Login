@@ -5,8 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PortalFp.Login"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Portal FP - Acceso" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Portal FP"
+                   FontSize="32"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Grid.Row="1"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,15">
+            <Label Content="_Usuario:"
+                   Target="{Binding ElementName=TxtUsuario}"
+                   FontSize="14"/>
+
+
+            <TextBox x:Name="TxtUsuario"
+                 FontSize="14"
+                 Padding="5"
+                     TabIndex="1"
+                 AutomationProperties.Name="Campo de usuario"/> 
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,15">
+            <Label Content="_Contraseña:"
+                   Target="{Binding ElementName=PwdContraseña}"
+                   FontSize="14"/>
+            <PasswordBox x:Name="PwdContraseña"
+                         FontSize="14"
+                         Padding="5"
+                         TabIndex="2"
+                         AutomationProperties.Name="Campo de contraseña"/>
+            
+        </StackPanel>
+
+        <Button x:Name="BtnAcceder"
+                Content="Acceder"
+                Grid.Row="4"
+                IsDefault="true"
+                Padding="15,7"
+                FontSize="14"
+                TabIndex="3"
+                HorizontalAlignment="Center"
+                Cursor="Hand"
+                Click="BtnAcceder_Click"
+                AutomationProperties.Name="Botón de acceder"/>
+        
+        <TextBlock x:Name="TxtMensaje"
+                   Grid.Row="5"
+                   Margin="0,15,0,0"
+                   HorizontalAlignment="Center"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   TextWrapping="Wrap"/>
+
+
+
 
     </Grid>
 </Window>

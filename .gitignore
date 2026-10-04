@@ -1,0 +1,12 @@
+# Carpetas de build y de Visual Studio
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# Archivos de usuario (configuración local, no se comparte)
+*.user
+*.suo
+
+# Otros ficheros temporales típicos
+*.tmp
+*.cache
